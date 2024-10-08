@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import {FiDownload} from "react-icons/fi"
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 export default function Home() {
   return (
 <section className="h-full">
@@ -42,6 +43,7 @@ export default function Home() {
 
     </div>
   </div>
+  <Stats />
 </section>
 
   );

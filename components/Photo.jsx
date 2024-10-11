@@ -24,7 +24,7 @@ const Photo = () => {
         mix-blend-lighten"
         >
           <Image
-            src="/assets/me.png"
+            src="/assets/photo.png"
             priority
             quality={100}
             fill

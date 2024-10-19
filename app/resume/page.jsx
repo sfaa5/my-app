@@ -122,8 +122,13 @@ className="flex flex-col xl:flex-row gap-[60px]"
         Experience
       </TabsTrigger>
 
-      <TabsTrigger value="skils">
-        Skils
+
+<TabsTrigger value="education" >
+  education
+</TabsTrigger>
+
+      <TabsTrigger value="skills">
+        Skills
       </TabsTrigger>
 
       <TabsTrigger value="about">
@@ -137,6 +142,24 @@ className="flex flex-col xl:flex-row gap-[60px]"
       <TabsContent  value="experience" className="w-full">
 experience
       </TabsContent>
+
+{/* education */}
+      <TabsContent  value="education" className="w-full">
+education
+      </TabsContent>
+
+      {/* skils */}
+      <TabsContent  value="skills" className="w-full">
+skills
+      </TabsContent>
+
+      
+      {/* about */}
+      <TabsContent  value="about" className="w-full">
+about
+      </TabsContent>
+
+
     </div>
   </Tabs>
 </div>

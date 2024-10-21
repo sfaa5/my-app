@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image"; // Import Next.js Image component
 
 import "swiper/css";
 
@@ -36,7 +37,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "node.js" }],
-    image: "/assets/work/thumb1.png",
+    image: "/assets/work/thumb2.png",
     live: "",
     github: "",
   },
@@ -148,7 +149,20 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20"></div>
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                      {/* overlay */}
+                      <div></div>
+                      {/* image */}
+
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={project.image}
+                          fill
+                          className="object-cover"
+                          alt=""
+                        />
+                      </div>
+                    </div>
                   </SwiperSlide>
                 );
               })}

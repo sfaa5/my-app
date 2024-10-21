@@ -243,8 +243,21 @@ const Resume = () => {
             </TabsContent>
 
             {/* about */}
-            <TabsContent value="about" className="w-full">
-              about
+            <TabsContent value="about" className="w-full text-center xl:text-left">
+              <div className="flex felx-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx:-0">{about.description}</p>
+                <ul>
+                  {about.info.map((item,index)=>{
+                    return(
+                      <li key={index}>
+<span>{item.filedName}</span>
+<span>{item.filedValue}</span>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>

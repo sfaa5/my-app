@@ -221,21 +221,23 @@ const Resume = () => {
 
                   <ul className="grid grid-col-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
                     {skills.skillsList.map((skills, index) => {
-                      return <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-               
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group gap-5">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">{skills.icon}</div>
-                            </TooltipTrigger>
+                      return (
+                        <li key={index}>
+                          <TooltipProvider delayDuration={100}>
+                            <Tooltip>
+                              <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group gap-5">
+                                <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                  {skills.icon}
+                                </div>
+                              </TooltipTrigger>
 
-                            <TooltipContent>
-                              <p className="capitalize">{skills.name}</p>
-                            </TooltipContent>
-             
-                        </Tooltip>
-                        
-                        </TooltipProvider></li>;
+                              <TooltipContent>
+                                <p className="capitalize">{skills.name}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        </li>
+                      );
                     })}
                   </ul>
                 </div>
@@ -243,18 +245,27 @@ const Resume = () => {
             </TabsContent>
 
             {/* about */}
-            <TabsContent value="about" className="w-full text-center xl:text-left">
-              <div className="flex felx-col gap-[30px]">
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx:-0">{about.description}</p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.info.map((item,index)=>{  
-                    return(
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4 ">
-<span>{item.filedName}</span>
-<span>{item.filedValue}</span>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
+
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 gap-5 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span className="text-white/60">{item.filedName}</span>
+                        <span className="text-xl"> {item.filedValue}</span>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>

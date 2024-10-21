@@ -219,16 +219,20 @@ const Resume = () => {
                     {skills.description}
                   </p>
 
-                  <ul className="grid grid-col-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+                  <ul className="grid grid-col-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
                     {skills.skillsList.map((skills, index) => {
                       return <li key={index}>
-                        <TooltipProvider>
+                        <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <Tooltip>
-                            <TooltipTrigger>
-                              <div>{skills.icon}</div>
+               
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group gap-5">
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">{skills.icon}</div>
                             </TooltipTrigger>
-                          </Tooltip>
+
+                            <TooltipContent>
+                              <p className="capitalize">{skills.name}</p>
+                            </TooltipContent>
+             
                         </Tooltip>
                         
                         </TooltipProvider></li>;

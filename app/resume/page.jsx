@@ -17,7 +17,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"; // Correct capitalization
-import { ScrollArea } from "@radix-ui/react-scroll-area";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 const about = {
   title: "about me",
@@ -60,7 +60,27 @@ const experience = {
   title: "My experience",
   description:
     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel illo aliquid commodi non, inventore ratione pariatur totam sit et voluptas eligendi dolorem earum assumenda.",
-  iterms: [
+  items: [
+    {
+      institution: "web Design Studio",
+      degree: "Front-End Developer Intern",
+      duration: "Summer 2021",
+    },
+    {
+      institution: "web Design Studio",
+      degree: "Front-End Developer Intern",
+      duration: "Summer 2021",
+    },
+    {
+      institution: "web Design Studio",
+      degree: "Front-End Developer Intern",
+      duration: "Summer 2021",
+    },
+    {
+      institution: "web Design Studio",
+      degree: "Front-End Developer Intern",
+      duration: "Summer 2021",
+    },
     {
       institution: "web Design Studio",
       degree: "Front-End Developer Intern",
@@ -157,7 +177,23 @@ const Resume = () => {
 {experience.description}
 </p> 
 
+<ScrollArea className="h-[400px]">
+  <ul   className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+          {experience.items.map((item,index)=>{
+               return <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                <span className="text-accent">{item.duration}</span>
+                <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left ">  {item.institution}</h3>
+                <div>
+                  {/* dot */}
+                  <span ></span>
+                  <p>{item.degree}</p>
+                </div>
+               </li>
 
+
+          })}
+  </ul>
+</ScrollArea>
 
 
 
@@ -179,6 +215,8 @@ const Resume = () => {
               about
             </TabsContent>
           </div>
+
+
         </Tabs>
       </div>
     </motion.div>

@@ -53,8 +53,27 @@ const Contact = () => {
                 <Input type="email" placeholder="Email address" />
                 <Input type="phone" placeholder="Phone number" />
               </div>
+
+        {/* select */}
+        <Select>
+            <SelectTrigger className="w-full">
+              <SelectValue placeholder="Select a service" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Select a service</SelectLabel>
+                <SelectItem value="est">Web Development</SelectItem>
+                <SelectItem value="cst">UI/UX Design</SelectItem>
+                <SelectItem value="mst">Logo Design</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+
             </form>
           </div>
+
+  
+
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
             info

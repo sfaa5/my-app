@@ -43,8 +43,7 @@ const Contact = () => {
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                iure odio at aut, ipsum a repudiandae quis eos officia magni et
-                molestiae ullam, quos deserunt. Illum aut magni omnis facilis!
+                iure odio at aut, ipsum
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -54,35 +53,44 @@ const Contact = () => {
                 <Input type="phone" placeholder="Phone number" />
               </div>
 
-        {/* select */}
-        <Select>
-            <SelectTrigger className="w-full">
-              <SelectValue placeholder="Select a service" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectLabel>Select a service</SelectLabel>
-                <SelectItem value="est">Web Development</SelectItem>
-                <SelectItem value="cst">UI/UX Design</SelectItem>
-                <SelectItem value="mst">Logo Design</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
+              {/* select */}
+              <Select>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select a service" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Select a service</SelectLabel>
+                    <SelectItem value="est">Web Development</SelectItem>
+                    <SelectItem value="cst">UI/UX Design</SelectItem>
+                    <SelectItem value="mst">Logo Design</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
 
-          {/* textarea */}
-          <Textarea
-          className="h-[200px]"
-          placeholder="Type your meesage here"
-          />
+              {/* textarea */}
+              <Textarea
+                className="h-[200px]"
+                placeholder="Type your meesage here"
+              />
 
+              <Button size="md" className="max-w-40">
+                Send message
+              </Button>
             </form>
           </div>
 
-  
-
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-            info
+            <ul className="flex flex-col gap-10">
+              {info.map((item, index) => {
+                return (
+                  <li key={index} className="flex items-center gap-6">
+                    <div className="w-[52px] h-[52px] xl:w-[]72px xl:w-"></div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </div>

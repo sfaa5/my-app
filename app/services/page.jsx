@@ -8,25 +8,19 @@ const services =[
   {
     num:'01',
     title:'web Development',
-    description:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.  illo culpa?',
+    description:'Building responsive, user-friendly websites from the ground up, tailored to your needs, and ensuring smooth performance across all devices.',
     href:""
   },
   {
     num:'02',
-    title:'UI/UX Development',
-    description:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.  illo culpa?',
+    title:`Backend  & Data Management`,
+    description:'Creating secure, efficient systems to manage your data and support seamless connections between your website and server.',
     href:""
   },
   {
     num:'03',
-    title:'Logo Design',
-    description:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.  illo culpa?',
-    href:""
-  },
-  {
-    num:'04',
-    title:'SEO',
-    description:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.  illo culpa?',
+    title:'Project Delivery & Support',
+    description:'Ensuring ongoing support to keep your project running efficiently and reliable.',
     href:""
   },
 ]
@@ -45,7 +39,7 @@ const Services = () => {
     transition:{delay:2.4 ,duration:0.4,ease:"easeIn"},
   }}
 
-  className ="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
+  className ="flex flex-col gap-[65px]"
   >
 {
   services.map((service,index)=>{

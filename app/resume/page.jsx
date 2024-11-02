@@ -6,7 +6,8 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
-  FaHtml5,
+  FaJava,
+  FaBootstrap,
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
@@ -20,9 +21,9 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 const about = {
-  title: "about me",
+  title: "About Me",
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel illo aliquid commodi non, inventore ratione pariatur totam sit et voluptas eligendi dolorem earum assumenda .",
+    "I'm a capable junior web developer who has studied a lot of technologies in technical university courses in advanced development settings with knowledgeable professors.",
   info: [
     {
       filedName: "Name",
@@ -37,17 +38,23 @@ const about = {
       filedValue: "2 Years",
     },
     {
-      filedName: "Nationality",
-      filedValue: "Egyption",
-    },
-    {
       filedName: "email",
       filedValue: "ym6772003@gmail.com",
     },
     {
+      filedName: "Nationality",
+      filedValue: "Egyption",
+    },
+  
+  
+
+    {
       filedName: "Freelance",
       filedValue: "Available",
     },
+
+
+
     {
       filedName: "Language",
       filedValue: "English, Arapic",
@@ -57,65 +64,46 @@ const about = {
 
 const experience = {
   icon: "assets/resume/badge.svg",
-  title: "My experience",
+  title: "My Experience",
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel illo aliquid commodi non, inventore ratione pariatur totam sit et voluptas eligendi dolorem earum assumenda.",
+    "I hold a Bachelor’s degree in Computer Science, with hands-on experience gained through internships at DEPI in web development and in Embedded Systems. These roles have enriched my skills across multiple areas of technology, preparing me to deliver high-quality, effective solutions.",
   items: [
     {
-      institution: "web Design Studio",
-      degree: "Front-End Developer Intern",
+      institution: "Monofia Univiristy",
+      degree: "Bachelor Computer Science",
+      duration: "Summer 2024",
+    },
+    {
+      institution: "DEPI",
+      degree: "web Developer Intern",
+      duration: "October 2024",
+    },
+    {
+      institution: "Embedia",
+      degree: "Embedded Systems Intern",
       duration: "Summer 2021",
     },
     {
-      institution: "web Design Studio",
-      degree: "Front-End Developer Intern",
+      institution: "Udemy",
+      degree: "Front-End online course",
       duration: "Summer 2021",
     },
-    {
-      institution: "web Design Studio",
-      degree: "Front-End Developer Intern",
-      duration: "Summer 2021",
-    },
-    {
-      institution: "web Design Studio",
-      degree: "Front-End Developer Intern",
-      duration: "Summer 2021",
-    },
-    {
-      institution: "web Design Studio",
-      degree: "Front-End Developer Intern",
-      duration: "Summer 2021",
-    },
-    {
-      institution: "web Design Studio",
-      degree: "Front-End Developer Intern",
-      duration: "Summer 2021",
-    },
-    {
-      institution: "web Design Studio",
-      degree: "Front-End Developer Intern",
-      duration: "Summer 2021",
-    },
-    {
-      institution: "web Design Studio",
-      degree: "Front-End Developer Intern",
-      duration: "Summer 2021",
-    },
+
   ],
 };
 
 const skills = {
   title: "My Skils",
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel illo aliquid commodi non, inventore ratione pariatur totam sit et voluptas eligendi dolorem earum assumenda.",
+    "I possess a strong foundation in web development, combining both frontend and backend technologies. My expertise allows me to create dynamic, responsive applications while effectively managing data and ensuring seamless user experiences.",
   skillsList: [
     {
-      icon: <FaHtml5 />,
-      name: "html 5",
+      icon: <FaBootstrap />,
+      name: "bootstrap",
     },
     {
-      icon: <FaCss3 />,
-      name: "css 3",
+      icon: <FaJava />,
+      name: "java",
     },
     {
       icon: <FaJs />,
@@ -161,9 +149,9 @@ const Resume = () => {
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">education</TabsTrigger>
+
             <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
 
           {/* content */}
@@ -205,10 +193,7 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            {/* education */}
-            <TabsContent value="education" className="w-full">
-              education
-            </TabsContent>
+
 
             {/* skils */}
             <TabsContent value="skills" className="w-full">

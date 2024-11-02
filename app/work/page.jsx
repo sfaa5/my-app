@@ -22,41 +22,59 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "GivingCircle",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+      "a user-friendly donation platform designed to make giving and receiving as easy as online shopping. Donors can seamlessly contribute, track their impact, and understand their donation eligibility through a points system, while recipients can choose what they need with simplicity and dignity. ",
+    stack: [{ name: "React.js" }, { name: "mongoDB" }, { name: "node.js" }],
+    image: "/assets/work/GC3.png",
     live: "",
-    github: "",
+    github: "https://github.com/sfaa5/GivingCircle",
   },
+
   {
     num: "02",
-    category: "fullstack",
+    category: "MUKTI",
     title: "project 2",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "node.js" }],
-    image: "/assets/work/thumb2.png",
+      "This hospital management system streamlines operations for doctors and provides patients with easy access to care. Patients can book appointments and be assigned to specific doctors based on their needs, ensuring a smooth process from check-in to quarantine when necessary.",
+    stack: [{ name: "React.js" }, { name: "Bootstrap" }, { name: "EJS" },{ name: "node.js" }],
+    image: "/assets/work/m8.png",
     live: "",
-    github: "",
+    github: "https://github.com/sfaa5/depi-project",
   },
+
   {
     num: "03",
-    category: "frontend",
+    category: "Dashboard",
     title: "project 3",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
+      "This dashboard efficiently manages users, supervisors, and donations. It allows admins to add, edit, and assign users, oversee incoming donations, and handle requests with options to accept or reject. By streamlining donation processing and organizing inventory, the dashboard ensures a smooth and efficient management experience.",
     stack: [
-      { name: "Next.js" },
-      { name: "Tailwind.css" },
+      { name: "React.js" },
       { name: "Javascript" },
+      { name: "mongoDB" },
     ],
-    image: "/assets/work/thumb3.png",
+    image: "/assets/work/D2.png",
     live: "",
-    github: "",
+    github: "https://github.com/sfaa5/Dashboared",
   },
+
+  {
+    num: "04",
+    category: "Sfsf social media",
+    title: "project 3",
+    description:
+      "This social platform enables users to connect and interact, much like early Facebook. Users can view posts, like, comment, add friends, and manage their connections, creating a simple and engaging social experience.",
+    stack: [
+      { name: "React.js" },
+      { name: "node.js" },
+      { name: "MongoDB" },
+    ],
+    image: "/assets/work/So.png",
+    live: "",
+    github: "https://github.com/sfaa5/Social",
+  }
 ];
 
 const Work = () => {
@@ -90,7 +108,7 @@ const Work = () => {
               {/* project category */}
 
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category}project{" "}
+                {project.category}
               </h2>
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
